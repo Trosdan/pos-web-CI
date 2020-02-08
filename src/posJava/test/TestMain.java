@@ -1,8 +1,9 @@
-package posJava;
+package posJava.test;
 
 import org.junit.jupiter.api.Test;
 
 import junit.framework.TestCase;
+import posJava.main.Valores;
 
 class TestMain extends TestCase {
 

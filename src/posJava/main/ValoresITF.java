@@ -1,4 +1,4 @@
-package posJava;
+package posJava.main;
 
 public interface ValoresITF {
 	boolean ins(int v);

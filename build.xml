@@ -4,8 +4,8 @@
 	</description>
 	
 	<!-- global properties for this build file -->
-	<property name="source.dir" location="src"/>
-	<property name="test.dir" location="src"/>
+	<property name="source.dir" location="src/posJava/main"/>
+	<property name="test.dir" location="src/posJava/test"/>
 	<property name="build.dir" location="build"/>
 	<property name="doc.dir" location="doc"/>
 	
@@ -30,7 +30,7 @@
 
 	<!-- Generate java doc for current project into ${doc.dir} -->
 	<target name="doc" description="Generate documentation">
-		<javadoc srcdir="${source.dir}" destdir="${doc.dir}" />
+		<javac srcdir="${source.dir}" destdir="${doc.dir}" includeantruntime="false" />
 	</target>
 
 	<!-- Generate java doc for current project into ${doc.dir} -->
@@ -42,7 +42,12 @@
 		</delete>
 	</target>
 	
-	<target name="main" depends="clean, init, compile, doc">
+
+	<target name="aplication" description="tidy up the workspace">
+		 <jar basedir="bin" destfile="jar/aplicacao.jar" />
+	</target>
+	
+	<target name="main" depends="clean, init, compile, doc, aplication">
 		<description>Main targer</description>
 	</target>
 </project>

@@ -1,4 +1,4 @@
-package posJava;
+package posJava.main;
 
 public class Valores implements ValoresITF {
 	
